@@ -247,17 +247,3 @@ test.requestHooks(introspectRequestLogger, identifyChallengeMock)('shall clear s
   await t.expect(identityPage.form.getTitle()).eql('Sign In');
   await t.expect(getStateHandleFromSessionStorage()).eql(null);
 });
-
-test.requestHooks(credentialSSONotExistLogger, credentialSSONotExistMock)('shall clear session.stateHandle when SSO extension fails', async t => {
-  const ssoExtensionPage = new BasePageObject(t);
-  await ssoExtensionPage.navigateToPage();
-  await t.expect(credentialSSONotExistLogger.count(
-    record => record.response.statusCode === 200 &&
-      record.request.url.match(/introspect/)
-  )).eql(1);
-  await t.expect(credentialSSONotExistLogger.count(
-    record => record.response.statusCode === 200 &&
-      record.request.url.match(/456\/verify\/cancel/)
-  )).eql(1);
-  await t.expect(getStateHandleFromSessionStorage()).eql(null);
-});
