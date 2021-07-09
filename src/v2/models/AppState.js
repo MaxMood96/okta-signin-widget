@@ -152,7 +152,7 @@ export default Model.extend({
   },
 
   shouldReRenderView(transformedResponse) {
-    if (transformedResponse?.idx?.context?.hasFormError) {
+    if (transformedResponse?.idx?.hasFormError) {
       return false;
     }
 
