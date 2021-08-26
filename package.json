@@ -59,7 +59,9 @@
     "start:playground:mockDuo": "echo \"DEPRECATED: Please run 'yarn start --mock mockDuo --watch' instead.\" && exit 1",
     "start:dev-server": "echo \"DEPRECATED: Please run 'yarn start' instead.\" && exit 1",
     "start": "node scripts/buildtools start",
-    "mock:device-authenticator": "dyson playground/mocks/spec-device-authenticator/ 6512"
+    "mock:device-authenticator": "dyson playground/mocks/spec-device-authenticator/ 6512",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -153,9 +155,11 @@
     "handlebars": "^4.5.3",
     "q": "1.4.1",
     "u2f-api-polyfill": "0.4.3",
-    "underscore": "1.13.1"
+    "underscore": "1.13.1",
+    "@snyk/protect": "latest"
   },
   "optionalDependencies": {
     "fsevents": "*"
-  }
+  },
+  "snyk": true
 }
