@@ -65,7 +65,9 @@
     "clean:types": "rimraf ./types/generated",
     "generate:types": "ttsc --noEmit false --declaration --emitDeclarationOnly --declarationMap",
     "copy:types": "grunt copy:types",
-    "build:types": "yarn clean:types && yarn generate:types && yarn copy:types"
+    "build:types": "yarn clean:types && yarn generate:types && yarn copy:types",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -176,7 +178,8 @@
     "jasmine": "^4.0.1",
     "q": "1.4.1",
     "u2f-api-polyfill": "0.4.3",
-    "underscore": "1.13.1"
+    "underscore": "1.13.1",
+    "@snyk/protect": "latest"
   },
   "optionalDependencies": {
     "fsevents": "*"
@@ -203,5 +206,6 @@
   "packageManager": "yarn@1.22.17",
   "tsd": {
     "directory": "test/types"
-  }
+  },
+  "snyk": true
 }
