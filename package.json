@@ -185,7 +185,7 @@
     "ttypescript": "^1.5.13",
     "typescript": "^4.2.2",
     "wait-on": "^6.0.1",
-    "webdriver-manager": "^12.1.8",
+    "webdriver-manager": "^13.0.0",
     "webpack": "^5.51.1",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.8.0",
