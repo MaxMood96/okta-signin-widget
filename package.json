@@ -103,7 +103,9 @@
     "clean:types": "grunt clean:types",
     "generate:types": "ttsc --noEmit false --declaration --emitDeclarationOnly --declarationMap",
     "copy:types": "grunt copy:types",
-    "build:types": "yarn clean:types && yarn generate:types && yarn copy:types"
+    "build:types": "yarn clean:types && yarn generate:types && yarn copy:types",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -246,7 +248,8 @@
     "parse-ms": "^2.0.0",
     "q": "1.4.1",
     "u2f-api-polyfill": "0.4.3",
-    "underscore": "1.13.1"
+    "underscore": "1.13.1",
+    "@snyk/protect": "latest"
   },
   "optionalDependencies": {
     "fsevents": "*"
@@ -281,5 +284,6 @@
   "packageManager": "yarn@1.22.17",
   "tsd": {
     "directory": "test/types"
-  }
+  },
+  "snyk": true
 }
