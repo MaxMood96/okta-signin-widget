@@ -213,7 +213,7 @@
     "sass-loader": "^13.2.2",
     "shelljs": "^0.8.5",
     "source-map-loader": "^3.0.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "^15.0.0",
     "stylelint-checkstyle-formatter": "^0.1.2",
     "stylelint-scss": "^3.20.1",
     "terser-webpack-plugin": "^5.2.4",
