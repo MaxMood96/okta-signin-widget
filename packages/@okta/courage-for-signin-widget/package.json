@@ -42,7 +42,7 @@
     "@okta/eslint-plugin-okta-ui": "0.1.0-beta.4181.g1f38f27",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-commonjs": "^26.0.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@types/backbone": "^1.4.15",
     "@types/underscore": "^1.11.4",
