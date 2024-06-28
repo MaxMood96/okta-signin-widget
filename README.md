@@ -250,16 +250,15 @@ If your organization has upgraded to [Identity Engine][], the smaller `oie` bund
 | oie        | okta-sign-in.oie.min.js         | 1.3 MB       |                    | :white_check_mark: |                    | Smaller bundle for OIE enabled orgs       |
 | classic    | okta-sign-in.classic.min.js     | 1.1 MB       | :white_check_mark: |                    |                    | Smaller bundle for Classic Engine only    |
 | polyfill   | okta-sign-in.polyfill.min.js    | 108KB        |                    |                    | :white_check_mark: | Standalone polyfill bundle. Can be used along with a widget bundle that does not include the polyfill. |
-| oie        | okta-sign-in.next.min.js        | 1.5 MB       |                    | :white_check_mark: | :white_check_mark: | Smaller bundle (3rd generation) for OIE enabled orgs|
 
 
 To embed the Sign-in Widget via CDN, include links to the JS and CSS files in your HTML:
 
 ```html
 <!-- Latest CDN production Javascript and CSS -->
-<script src="https://global.oktacdn.com/okta-signin-widget/7.18.0/js/okta-sign-in.min.js" type="text/javascript" integrity="sha384-h86ybaNDkv5vu+Rpay/S+yh7mTxlK6hlWP8ilgYqzhc3ZIi7WX4NDXVXqO0EnLmf" crossorigin="anonymous"></script>
+<script src="https://global.oktacdn.com/okta-signin-widget/7.19.6/js/okta-sign-in.min.js" type="text/javascript" integrity="sha384-WymQotpGWzrovXkAUV+MR2YB4wTxKN51jrP+sjzTmYTK98ZWOhyi6zHX+zOc0B1Y" crossorigin="anonymous"></script>
 
-<link href="https://global.oktacdn.com/okta-signin-widget/7.18.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet" integrity="sha384-s4VmJS0LKpE1WfmPdAkU95ZUvAyV4VjfkpSF6d43LR0Yjt5WTPiZVBy3ed4EYneO" crossorigin="anonymous" />
+<link href="https://global.oktacdn.com/okta-signin-widget/7.19.6/css/okta-sign-in.min.css" type="text/css" rel="stylesheet" integrity="sha384-FL6VsXYuwuq1Zo5lnWVgcOMWSo1JuvDue2bQ66/TdWOTwPEU9OgvF4Ks8fNnaiHd" crossorigin="anonymous" />
 ```
 
 **NOTE:** The CDN URLs contain a version number. This number should be the same for both the Javascript and the CSS file and match a version on the [releases page](https://github.com/okta/okta-signin-widget/releases). We recommend using the latest widget version.
@@ -269,13 +268,13 @@ When using one of the bundles without the polyfill included, you may want to con
 
 ```html
 <!-- Polyfill for older browsers -->
-<script src="https://global.oktacdn.com/okta-signin-widget/7.18.0/js/okta-sign-in.polyfill.min.js" type="text/javascript" integrity="sha384-wJqq26Mh3D881mQ2Y8EyhHmQU2ovR3nf5+uV3atTdOwBtHelrBRHOmuk5OdgckqW" crossorigin="anonymous"></script>
+<script src="https://global.oktacdn.com/okta-signin-widget/7.19.6/js/okta-sign-in.polyfill.min.js" type="text/javascript" integrity="sha384-QzQIGwIndxyBdHRQOwgjmQJLod6LRMchZyYg7RUq8FUECvPvreqauQhkU2FF9EGD" crossorigin="anonymous"></script>
 
 <!-- Widget bundle for Okta Identity Engine -->
-<script src="https://global.oktacdn.com/okta-signin-widget/7.18.0/js/okta-sign-in.oie.min.js" type="text/javascript" integrity="sha384-8LjJINurj831uYiPVFXLM9lCQXtVBeVRqg1UTkKyfn2K0gPrCZY3IzfD6bhlDVJp" crossorigin="anonymous"></script>
+<script src="https://global.oktacdn.com/okta-signin-widget/7.19.6/js/okta-sign-in.oie.min.js" type="text/javascript" integrity="sha384-wrxovbZUmvGqWTK0ufNbI+vyXUxfzBN4LnwiFy2and+F8G+LAKJnlq+yLzE6wIz/" crossorigin="anonymous"></script>
 
 <!-- CSS for widget -->
-<link href="https://global.oktacdn.com/okta-signin-widget/7.18.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet" integrity="sha384-s4VmJS0LKpE1WfmPdAkU95ZUvAyV4VjfkpSF6d43LR0Yjt5WTPiZVBy3ed4EYneO" crossorigin="anonymous" />
+<link href="https://global.oktacdn.com/okta-signin-widget/7.19.6/css/okta-sign-in.min.css" type="text/css" rel="stylesheet" integrity="sha384-FL6VsXYuwuq1Zo5lnWVgcOMWSo1JuvDue2bQ66/TdWOTwPEU9OgvF4Ks8fNnaiHd" crossorigin="anonymous" />
 ```
 
 

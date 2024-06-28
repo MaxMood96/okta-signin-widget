@@ -62,6 +62,9 @@ const Body = BaseForm.extend({
       element: this.$el,
     };
 
+    // Toggle Form saving status (e.g. disabling save button, etc)
+    this.model.trigger('request');
+
     // For certain flows, we need to generate a device fingerprint
     // to determine if we need to send a "New Device Sign-on Notification".
     // In the future, this should be handled completely by okta-auth-js OKTA-418160
@@ -175,7 +178,7 @@ const Body = BaseForm.extend({
       return false;
     }
 
-    const message = messages.find(message => message.i18n.key === CUSTOM_ACCESS_DENIED_KEY);
+    const message = messages?.find(message => message.i18n.key === CUSTOM_ACCESS_DENIED_KEY);
     if (!message) {
       return false;
     }

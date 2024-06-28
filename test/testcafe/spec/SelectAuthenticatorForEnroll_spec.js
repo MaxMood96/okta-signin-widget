@@ -136,7 +136,7 @@ test.requestHooks(mockEnrollAuthenticatorPassword)('should load select authentic
   await t.expect(selectFactorPage.getFactorSelectButtonByIndex(4)).eql('Set up');
   await t.expect(selectFactorPage.getFactorSelectButtonDataSeByIndex(4, true)).eql('okta_verify');
   await t.expect(selectFactorPage.getFactorDescriptionByIndex(4))
-    .eql('Okta Verify is an authenticator app, installed on your phone, used to prove your identity');
+    .eql('Okta Verify is an authenticator app, installed on your phone or computer, used to prove your identity');
   await t.expect(await selectFactorPage.factorUsageTextExistsByIndex(4)).eql(false);
 
   await t.expect(selectFactorPage.getFactorLabelByIndex(5)).eql('Google Authenticator');
@@ -245,7 +245,7 @@ test.requestHooks(mockEnrollAuthenticatorWithUsageInfo)('should load select auth
   await t.expect(selectFactorPage.getFactorSelectButtonByIndex(2)).eql('Set up');
   await t.expect(selectFactorPage.getFactorSelectButtonDataSeByIndex(2, true)).eql('okta_verify');
   await t.expect(selectFactorPage.getFactorDescriptionByIndex(2))
-    .eql('Okta Verify is an authenticator app, installed on your phone, used to prove your identity');
+    .eql('Okta Verify is an authenticator app, installed on your phone or computer, used to prove your identity');
   await t.expect(await selectFactorPage.factorUsageTextExistsByIndex(2)).eql(true);
   await t.expect(selectFactorPage.getFactorUsageTextByIndex(2)).eql('Used for access or recovery');
 
@@ -339,10 +339,8 @@ test.requestHooks(requestLogger, mockEnrollAuthenticatorPhoneSmsInvalidPhone)('s
   await t.expect(req3Body?.authenticator?.phoneNumber).eql('+1123');
   await t.expect(req3Body?.stateHandle).notEql(undefined);
 
-  // in gen 2 we re-introspect when clicking return to authenticator,
-  // so the second enroll call is one request later.
   // clicking phone in authenticator list
-  const req4 = userVariables.gen3 ? requestLogger.requests[3].request : requestLogger.requests[4].request;
+  const req4 = requestLogger.requests[3].request;
   await t.expect(req4.url).eql('http://localhost:3000/idp/idx/credential/enroll');
   await t.expect(req4.method).eql('post');
   const req4Body = JSON.parse(req4.body);
@@ -420,7 +418,7 @@ test.requestHooks(mockEnrollAuthenticatorWithCustomApp)('should load select auth
   await t.expect(selectFactorPage.getFactorSelectButtonByIndex(2)).eql('Set up');
   await t.expect(selectFactorPage.getFactorSelectButtonDataSeByIndex(2, true)).eql('okta_verify');
   await t.expect(selectFactorPage.getFactorDescriptionByIndex(2))
-    .eql('Okta Verify is an authenticator app, installed on your phone, used to prove your identity');
+    .eql('Okta Verify is an authenticator app, installed on your phone or computer, used to prove your identity');
   await t.expect(await selectFactorPage.factorUsageTextExistsByIndex(2)).eql(false);
 
   await t.expect(selectFactorPage.getFactorLabelByIndex(3)).eql('Phone');
