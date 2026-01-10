@@ -197,7 +197,7 @@
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "2.99.1",
     "jasmine-reporters": "^2.5.0",
-    "jest": "^26.6.3",
+    "jest": "^27.0.0",
     "jest-canvas-mock": "^2.3.1",
     "jest-fetch-mock": "^3.0.3",
     "jest-junit": "^13.1.0",
